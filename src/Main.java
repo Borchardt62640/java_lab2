@@ -4,6 +4,16 @@ import java.util.*;
 
 public class Main {
 
+    public static void read(List<String> lista){
+        for(String str : lista){
+            System.out.println(str);
+        }
+    }
+    public static void read(Set<Integer> lista){
+        for(Integer str : lista){
+            System.out.println(str);
+        }
+    }
     public static void main(String[] args) {
 
         /* ćw_6 Listy */
@@ -18,6 +28,25 @@ public class Main {
                 d) następnie proszę wykonać odwrotne sortowanie i znów użyć metody z punktu b) do wyświetlenia
                 elementów listy
           */
+//        List<String> lista = new ArrayList<>();
+//        Scanner sc = new Scanner(System.in);
+//        for(int i=0; i<5; i++){
+//            lista.add(sc.next());
+//        }
+//        read(lista);
+//
+//        lista.remove(lista.size()-1);
+//        lista.remove(lista.size()-1);
+//
+//        lista.add(sc.next());
+//        lista.add(sc.next());
+//        lista.add(sc.next());
+//        read(lista);
+//        System.out.println("wielkosc listy = " + lista.size());
+//
+//        Collections.sort(lista, Collections.reverseOrder());
+//
+//        read(lista);
 
 
          /* zad.2 Napisać program który stworzy Set<Integer> i wprowadzamy 10 liczb z klawiatury
@@ -25,6 +54,14 @@ public class Main {
                  a następnie przeiterować i wyświetlić forEach-em (jak wyżej)
          */
 
+        Scanner sc = new Scanner(System.in);
+        Set<Integer> wiek = new TreeSet<>();
+        for(int i =0; i<10; i++){
+            wiek.add(Integer.parseInt(sc.next()));
+        }
+
+        wiek.stream().sorted().forEach(System.out::println);
+        read(wiek);
     }
 
 }
